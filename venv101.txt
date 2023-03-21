@@ -1,0 +1,29 @@
+Setup the github {Repository}
+1. new enviroment
+2. setup.py
+3.requirements.txt
+
+Create new repository > Public
+Create a folder in my computer
+
+open the folder in vscode 
+open new cmd terminal > type> conda create -p venv python==3.8 -y 
+type > conda activate venv/
+
+Syncing repo into github
+git init
+git add README.md
+git config --global user.email "nikhilshetty439@gmail.com"
+git config --local user.name "wiznikvibe"
+git commit -m "First Commit"
+
+git branch -M main
+git remote add origin https://github.com/wiznikvibe/mk1project.git
+git remote -v
+git push -u origin main
+
+-- Writing Setup Script 
+The setup script is the centre of all activity in building, distributing and installing modules using the distutis.
+setup.py is used to make the whole machine learning project into a package
+
+Src folder and build package 
