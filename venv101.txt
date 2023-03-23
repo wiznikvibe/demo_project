@@ -25,5 +25,8 @@ git push -u origin main
 -- Writing Setup Script 
 The setup script is the centre of all activity in building, distributing and installing modules using the distutis.
 setup.py is used to make the whole machine learning project into a package
+Here we have used setuptools package in python which is designed to facilitate packaging of python projects.
+find_packages will search the complete directory for __init__.py file.
 
 Src folder and build package 
+to get src file as a package > create a __init__.py file in in folder
