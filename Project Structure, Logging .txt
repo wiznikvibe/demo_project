@@ -1,0 +1,17 @@
+# 2 Project Structure, Logging And Exception Handling 
+> Project is built inside the src folder
+> component file stores the components which are used throughout the project cycle for ex. data_ingestion.py, data_transformation.py, model_trainer.py and so on...
+> Create a folder components > create __init__.py > so it can be exported as a package or imported to other file location
+
+-- exception.py
+> sys module holds the error_details
+> read documentation for exception handling
+ 
+-- Logger.py 
+> import logging > logs the information about any execution taking place and track errors.
+> import os
+> from datetime import datetime > to create a log file with the exact time
+
+
+
+

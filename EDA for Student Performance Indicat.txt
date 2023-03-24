@@ -1,0 +1,2 @@
+EDA for Student Performance Indicator
+> Create a notebook folder> create data folder holding the csv file
