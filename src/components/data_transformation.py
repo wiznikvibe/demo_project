@@ -6,7 +6,7 @@ import pandas as pd
 from sklearn.compose import ColumnTransformer
 from sklearn.impute import SimpleImputer
 from sklearn.pipeline import Pipeline
-from sklearn.preprocessing import OneHotEncoder,StandardScaler
+from sklearn.preprocessing import OneHotEncoder, StandardScaler, OrdinalEncoder 
 
 from src.exception import CustomException
 from src.logger import logging
@@ -37,19 +37,19 @@ class DataTransformation:
             num_pipeline = Pipeline(
                 steps = [
                     ("Imputer",SimpleImputer(strategy='median')),
-                    ("scaler",StandardScaler(with_mean=False))
+                    ("scaler",StandardScaler())
                 ])
 
             cat_pipeline = Pipeline(
                 steps = [
                     ("Imputer",SimpleImputer(strategy='most_frequent')),
-                    ("One_Hot_Encoder",OneHotEncoder()),
-                    ("scaler",StandardScaler(with_mean=False))
+                    ("Ordinal_Encoder",OneHotEncoder(handle_unknown='ignore')),
+                    
                 ]
             )
 
-            logging.info("Numerical Columns scaling complete")
-            logging.info("Categorical Columns encoding complete")
+            logging.info(f"Numerical Columns scaling complete: {numerical_columns}")
+            logging.info(f"Categorical Columns encoding complete: {categorical_columns}")
 
             preprocessor = ColumnTransformer(
                 [
